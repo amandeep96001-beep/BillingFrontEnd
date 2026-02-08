@@ -324,7 +324,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onGetStarted }) => {
                 End-to-end billing solutions including charge capture, claim submission,
                 payment posting, and patient billing to maximize your revenue.
               </p>
-              <a href="#" className="service-link">Learn More →</a>
+              <a href="/medical-billing-services" className="service-link">Learn More →</a>
             </div>
 
             <div className="service-card">
@@ -339,7 +339,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onGetStarted }) => {
                 Proactive denial prevention, rapid appeals processing, and root-cause
                 analysis to recover lost revenue and reduce future denials.
               </p>
-              <button type="button" className="service-link">Learn More →</button>
+              <a href="/denial-management" className="service-link">Learn More →</a>
             </div>
 
             <div className="service-card">
@@ -354,7 +354,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onGetStarted }) => {
                 AI-powered claims scrubbing, electronic submission, and real-time
                 tracking to ensure clean claims and faster reimbursements.
               </p>
-              <button type="button" className="service-link">Learn More →</button>
+              <a href="/claims-processing" className="service-link">Learn More →</a>
             </div>
 
             <div className="service-card">
@@ -369,7 +369,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onGetStarted }) => {
                 Strategic AR follow-up, aged receivables management, and automated
                 workflows to accelerate cash flow and reduce days in AR.
               </p>
-              <button type="button" className="service-link">Learn More →</button>
+              <a href="/ar-collections" className="service-link">Learn More →</a>
             </div>
 
             <div className="service-card">
@@ -383,7 +383,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onGetStarted }) => {
                 Real-time dashboards, KPI tracking, and custom financial reports that
                 provide actionable intelligence to drive growth.
               </p>
-              <button type="button" className="service-link">Learn More →</button>
+              <a href="/analytics" className="service-link">Learn More →</a>
             </div>
 
             <div className="service-card">
@@ -397,7 +397,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onGetStarted }) => {
                 Stay compliant with HIPAA, payer regulations, and coding standards.
                 We handle provider credentialing and enrollment seamlessly.
               </p>
-              <button type="button" className="service-link">Learn More →</button>
+              <a href="/compliance-credentialing" className="service-link">Learn More →</a>
             </div>
           </div>
         </div>
