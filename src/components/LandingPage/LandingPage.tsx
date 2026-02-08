@@ -7,7 +7,6 @@ interface LandingPageProps {
   onGetStarted: () => void;
 }
 
-/* ── Animated counter hook ── */
 function useCounter(target: number, duration = 2000, start = false) {
   const [count, setCount] = useState(0);
   useEffect(() => {
@@ -236,7 +235,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onGetStarted }) => {
           <div className="trusted-logos">
             <div className="trusted-logo-item">
               <span className="trusted-logo-svg hospital">
-                {/* Hospital SVG */}
+
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="3" y="3" width="18" height="18" rx="2" />
                   <path d="M12 7v10M7 12h10" />
@@ -246,7 +245,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onGetStarted }) => {
             </div>
             <div className="trusted-logo-item">
               <span className="trusted-logo-svg health-system">
-                {/* Health System SVG */}
+                
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="4" y="4" width="16" height="16" rx="3" />
                   <path d="M8 8h8v8H8z" />
@@ -340,7 +339,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onGetStarted }) => {
                 Proactive denial prevention, rapid appeals processing, and root-cause
                 analysis to recover lost revenue and reduce future denials.
               </p>
-              <a href="#" className="service-link">Learn More →</a>
+              <button type="button" className="service-link">Learn More →</button>
             </div>
 
             <div className="service-card">
@@ -355,7 +354,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onGetStarted }) => {
                 AI-powered claims scrubbing, electronic submission, and real-time
                 tracking to ensure clean claims and faster reimbursements.
               </p>
-              <a href="#" className="service-link">Learn More →</a>
+              <button type="button" className="service-link">Learn More →</button>
             </div>
 
             <div className="service-card">
@@ -370,7 +369,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onGetStarted }) => {
                 Strategic AR follow-up, aged receivables management, and automated
                 workflows to accelerate cash flow and reduce days in AR.
               </p>
-              <a href="#" className="service-link">Learn More →</a>
+              <button type="button" className="service-link">Learn More →</button>
             </div>
 
             <div className="service-card">
@@ -384,7 +383,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onGetStarted }) => {
                 Real-time dashboards, KPI tracking, and custom financial reports that
                 provide actionable intelligence to drive growth.
               </p>
-              <a href="#" className="service-link">Learn More →</a>
+              <button type="button" className="service-link">Learn More →</button>
             </div>
 
             <div className="service-card">
@@ -398,7 +397,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onGetStarted }) => {
                 Stay compliant with HIPAA, payer regulations, and coding standards.
                 We handle provider credentialing and enrollment seamlessly.
               </p>
-              <a href="#" className="service-link">Learn More →</a>
+              <button type="button" className="service-link">Learn More →</button>
             </div>
           </div>
         </div>
@@ -642,38 +641,38 @@ const LandingPage: React.FC<LandingPageProps> = ({ onGetStarted }) => {
 
             <div className="footer-links-col">
               <h4 className="footer-col-title">Solutions</h4>
-              <a href="#" className="footer-link">Medical Billing</a>
-              <a href="#" className="footer-link">Denial Management</a>
-              <a href="#" className="footer-link">Claims Processing</a>
-              <a href="#" className="footer-link">AR &amp; Collections</a>
-              <a href="#" className="footer-link">Analytics</a>
+              <a href="/medical-billing" className="footer-link">Medical Billing</a>
+              <a href="/denial-management" className="footer-link">Denial Management</a>
+              <a href="/claims-processing" className="footer-link">Claims Processing</a>
+              <a href="/ar-collections" className="footer-link">AR &amp; Collections</a>
+              <a href="/analytics" className="footer-link">Analytics</a>
             </div>
 
             <div className="footer-links-col">
               <h4 className="footer-col-title">Who We Serve</h4>
-              <a href="#" className="footer-link">Physician Groups</a>
-              <a href="#" className="footer-link">Health Systems</a>
-              <a href="#" className="footer-link">Hospitals</a>
-              <a href="#" className="footer-link">Labs &amp; Imaging</a>
-              <a href="#" className="footer-link">Behavioral Health</a>
+              <a href="/physician-groups" className="footer-link">Physician Groups</a>
+              <a href="/health-systems" className="footer-link">Health Systems</a>
+              <a href="/hospitals" className="footer-link">Hospitals</a>
+              <a href="/labs-imaging" className="footer-link">Labs &amp; Imaging</a>
+              <a href="/behavioral-health" className="footer-link">Behavioral Health</a>
             </div>
 
             <div className="footer-links-col">
               <h4 className="footer-col-title">Company</h4>
-              <a href="#" className="footer-link">About Us</a>
-              <a href="#" className="footer-link">Careers</a>
-              <a href="#" className="footer-link">Blog</a>
-              <a href="#" className="footer-link">Contact</a>
-              <a href="#" className="footer-link">Privacy Policy</a>
+              <a href="/about" className="footer-link">About Us</a>
+              <a href="/careers" className="footer-link">Careers</a>
+              <a href="/blog" className="footer-link">Blog</a>
+              <a href="/contact" className="footer-link">Contact</a>
+              <a href="/privacy-policy" className="footer-link">Privacy Policy</a>
             </div>
           </div>
 
           <div className="footer-bottom">
             <p className="footer-copyright">© 2026 Revian Globel. All rights reserved.</p>
             <div className="footer-socials">
-              <a href="#" className="footer-social" aria-label="LinkedIn">in</a>
-              <a href="#" className="footer-social" aria-label="Twitter">𝕏</a>
-              <a href="#" className="footer-social" aria-label="Facebook">f</a>
+              <a href="https://linkedin.com" className="footer-social" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
+              <a href="https://twitter.com" className="footer-social" aria-label="Twitter" target="_blank" rel="noopener noreferrer">𝕏</a>
+              <a href="https://facebook.com" className="footer-social" aria-label="Facebook" target="_blank" rel="noopener noreferrer">f</a>
             </div>
           </div>
         </div>
