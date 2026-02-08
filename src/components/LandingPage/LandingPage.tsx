@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Button from '../../Reusable/Button/Button';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
+
 import './LandingPage.css';
+import Contactus from '../Contectus/Contactus';
 
 interface LandingPageProps {
   onGetStarted: () => void;
@@ -43,7 +45,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onGetStarted }) => {
   const claims = useCounter(500, 2000, statsVisible);
   const clients = useCounter(200, 2000, statsVisible);
   const years = useCounter(10, 1500, statsVisible);
-
+  const [contactOpen, setContactOpen] = useState(false);
   return (
     <div className="landing-page">
       {/* ── Background Decorations ── */}
@@ -573,7 +575,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onGetStarted }) => {
                 <Button variant="primary" size="lg" onClick={onGetStarted}>
                   Schedule a Consultation
                 </Button>
-                <Button variant="secondary" size="lg" onClick={() => alert('Contact: info@reviangloel.com')}>
+                  <Button variant="secondary" size="lg" onClick={() => setContactOpen(true)}>
                   Contact Us
                 </Button>
               </div>
@@ -613,7 +615,9 @@ const LandingPage: React.FC<LandingPageProps> = ({ onGetStarted }) => {
             </div>
           </div>
         </div>
+          <Contactus   open={contactOpen} onClose={() => setContactOpen(false)} />
       </section>
+      
 
       {/* ══════════ FOOTER ══════════ */}
       <footer className="landing-footer">

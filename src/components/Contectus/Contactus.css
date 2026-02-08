@@ -1,0 +1,100 @@
+.contactus-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(.4,0,.2,1);
+  z-index: 9999;
+}
+.contactus-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.contactus-modal {
+  background: var(--bg-white);
+  color: var(--text-primary);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: var(--shadow-xl, 0 8px 32px rgba(0,0,0,0.18));
+  position: relative;
+  transform: translateY(40px) scale(0.96);
+  opacity: 0;
+  transition:
+    opacity 0.3s cubic-bezier(.4,0,.2,1),
+    transform 0.3s cubic-bezier(.4,0,.2,1);
+}
+.contactus-modal.open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.contactus-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.7rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.contactus-close:hover {
+  color: var(--primary-600);
+}
+
+.contactus-title {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-600);
+  text-align: center;
+}
+
+.contactus-form input,
+.contactus-form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: var(--bg-light);
+  color: var(--text-primary);
+  transition: border 0.2s, background 0.2s, color 0.2s;
+}
+.contactus-form input:focus,
+.contactus-form textarea:focus {
+  border: 1.5px solid var(--primary-600);
+  outline: none;
+}
+
+.contactus-submit {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(90deg, var(--primary-400) 0%, var(--primary-600) 100%);
+  color: var(--text-white);
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contactus-submit:hover {
+  background: linear-gradient(90deg, var(--primary-600) 0%, var(--primary-400) 100%);
+}
+
+.contactus-success {
+  padding: 1.5rem 0;
+  color: var(--success-500);
+  text-align: center;
+  font-size: 1.1rem;
+}
