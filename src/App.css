@@ -1,38 +1,180 @@
+/* ==========================================
+   GLOBAL APP STYLES
+   ========================================== */
+
+@import './styles/variables.css';
+@import './styles/utilities.css';
+@import './styles/components.css';
+
+/* Global resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+}
+
+/* ==========================================
+   APP MAIN CONTAINER
+   ========================================== */
+
 .App {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.App.dashboard-background {
+  background-color: var(--bg-light);
+  transition: background-color 0.3s ease;
+}
+
+/* ==========================================
+   CONTAINER
+   ========================================== */
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--spacing-8);
+  width: 100%;
+}
+
+/* ==========================================
+   TOP BAR (Dashboard Navigation)
+   ========================================== */
+
+.top-bar {
+  margin-bottom: var(--spacing-6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-button {
+  background-color: var(--bg-white);
+  color: var(--color-primary);
+  border: 1px solid var(--border-light);
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.back-button:hover {
+  background-color: var(--bg-gray);
+  box-shadow: var(--shadow-md);
+  transform: translateX(-2px);
+}
+
+/* ==========================================
+   HEADER
+   ========================================== */
+
+.header {
+  margin-bottom: var(--spacing-12);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header h1 {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-3);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header p {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ==========================================
+   DASHBOARD SECTION
+   ========================================== */
+
+.dashboard {
   display: flex;
   flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+/* Content Grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: var(--spacing-8);
+  margin-bottom: var(--spacing-8);
+}
+
+.main-card {
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.main-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: var(--spacing-6);
+  border-bottom: 1px solid var(--border-light);
+  background-color: var(--bg-light);
 }
 
-.App-link {
-  color: #61dafb;
+.card-header h2 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card-body {
+  padding: var(--spacing-6);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-4);
   }
-  to {
-    transform: rotate(360deg);
+
+  .header h1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-3);
+  }
+
+  .card-header h2 {
+    width: 100%;
+  }
+
+  .card-header button {
+    width: 100%;
   }
 }

@@ -1,0 +1,16 @@
+.header {
+  margin-bottom: var(--spacing-12);
+  text-align: center;
+}
+
+.header h1 {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-3);
+}
+
+.header p {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+}
